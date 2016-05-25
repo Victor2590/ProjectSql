@@ -26,37 +26,37 @@ CONSTRAINT pku PRIMARY KEY (id)
 from "user"
 join "postarea"
 on "user".id = "postarea".fk_user
-where username = 'Adrian'
+where username = 'Adrian';
 
 2.SELECT username
 FROM "user";
 
 3.SELECT *
 FROM "user"
-WHERE blocat='0'
+WHERE blocat='0';
 
 4.Select username, varsta
 from "user"
-where varsta = (select MIN(varsta) from "user")
+where varsta = (select MIN(varsta) from "user");
 
 5.select username, varsta
 from "user"
 where (varsta between 23 and 33)
-order by varsta ASC
+order by varsta ASC;
 
 6.SELECT AVG(varsta)
 FROM "user"
-WHERE blocat = '1'
+WHERE blocat = '1';
 
 7.select username
 from "user"
-where orasul='Cluj-Napoca' and blocat='0'
+where orasul='Cluj-Napoca' and blocat='0';
 
 8.select fk_user, username, mesaj
 from "user"
 join "postarea"
 on "user".id = "postarea".fk_user
-where blocat = '0' and orasul = 'Cluj-Napoca' and varsta > 23
+where blocat = '0' and orasul = 'Cluj-Napoca' and varsta > 23;
 
 9.SELECT username,count(postarea.fk_user) as numar_de_mesaje
 from "user"
@@ -65,20 +65,20 @@ on "user".id = "postarea".fk_user
 group by
 "user".id
 order by numar_de_mesaje DESC
-limit 1
+limit 1;
 
 
 10.select fk_user, username, mesaj
 from "user"
 join "postarea"
 on "user".id = "postarea".fk_user
-where data_postarii between '01.05.2016' and '02.29.2016' and username like 'B%'
+where data_postarii between '01.05.2016' and '02.29.2016' and username like 'B%';
 
 
 
 11.SELECT *
 FROM "postarea"
-ORDER BY data_postarii DESC
+ORDER BY data_postarii DESC;
 
 
 12.DELETE from "postarea"
